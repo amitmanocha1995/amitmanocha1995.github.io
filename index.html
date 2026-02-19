@@ -342,8 +342,26 @@
               <p><em>Americold Logistics, LLC, Atlanta, GA</em></p>
               <h6>Cloud Data Architecture & Engineering</h6>
                 <ul>
-                <li>Used advanced analytics techniques to classify customer reviews, reducing manual effort by 3 business days per month. This resulted in an 11% boost in the Net Promoter Score, reflecting improved customer satisfaction across all services.</li>
-                <li>Delivered an interactive and user-friendly Tableau Dashboard and Streamlit web application, assisting stakeholders effortlessly analyze the Net Promoter Score across all categories, highlighting Axon's strengths and pinpointing areas for improvement.</li>
+                <li>Architected replacement of legacy SAG system, deploying ECS Fargate cluster to ingest, map, and output WMS data to S3/XML for 3PL apps delivering real-time processing, eliminating batch delays, and scaling to support 150+ warehouses with 99.9% uptime.</li>
+                <li>Led team of 3 engineers in Accessorials cloud migration, building end-to-end event-driven pipeline (Redshift to DynamoDB leveraging Lambda/SQS/Step Functions/Glue) scaling to 500K daily events with parallel job orchestration and real-time SNS alerting.</li>
+                <li>Implemented AWS DMS with CDC to migrate 3PL application from on-premises Oracle to Redshift achieving zero-downtime cutover with continuous incremental sync, processing 10M+ records daily post-migration.</li>
+                <li>Built a high-throughput AWS pipeline to capture Salesforce data via Partner Event Bus using SQS-triggered Lambda functions to efficiently ingest multi-stream revenue data processing 250K events/day into Redshift SUPER column for flexible semi-structured storage; developed dynamic PartiQL views on the table and designed a schema enabling seamless ingestion into EPM application.</li>
+                <li>Developed Dockerized Flask API aggregating billing data from Redshift views for Finance team applications deployed on AWS ECS with Application Load Balancer, serving 10K+ daily requests at 100% SLA compliance and accelerating month-end close by 2 days.</li>
+              </ul>
+                <h6>Pipeline Automation & Data Reliability</h6>
+              <ul>
+                <li>Engineered event-driven AWS Glue job monitoring system using Amazon DocumentDB and SNS. Triggering automatic status entries and real-time email alerts for success/failure, enabling proactive issue resolution, cutting manual monitoring by 80%.</li>
+                <li>Created Lambda-driven Step Functions automation that automatically detects, prioritizes, and reprocesses failed billing Glue jobs from Redshift logs (last 24hrs), replacing 80+ hours of monthly manual error hunting and recovery across facilities—handling up to max-concurrency failures with smart ranking by facility/time/failed steps.</li>
+                <li>Automated the daily SharePoint-to-S3 metrics sync using AWS Lambda integrated with Azure ADP, performing file validations and uploads without manual intervention. This replaced a 2–3 hour daily manual process, saving approximately $41K–$62K in labor costs. Enhanced data accuracy and reliability by triggering automated email alerts to warehouse GMs for any validation issues.</li>
+                <li>Developed and automated an error file validation pipeline, which scans all servers, extracts error files, and compares them with the previous day's data. Integrated production log analysis and created a batch script for automated file reprocessing, packaging the solution into an executable for efficient error handling. Within 3 months, this process reduced data-related errors by ~50%.</li>
+                <li>Created and automated an outlier report using an AWS Lambda function, integrating data from Oracle and Postgres databases. Applied z-score, IQR and other statistical measures, reducing validation time by ~1 hour daily and decreasing false positives by 20%.</li>
+                <li>Built a comprehensive, interactive data quality tool using Streamlit, centralizing daily monitoring by integrating 5-6 key checks such as outlier detection, missing data, and error file validations. Developed dynamic dashboards enabling automated email alerts based on analysis. The tool, highly praised by management, provides real-time access to monitor data quality issues and insights.</li>
+              </ul>
+                <h6>Data Analysis, Validation & Reporting</h6>
+              <ul>
+                <li>Built a high-performance, cross-database reconciliation framework using AWS Glue, PySpark, and Redshift Spectrum to compare Redshift and Oracle datasets via UUID-based hashing, reducing processing time from 3 hours to 3 minutes; stored results in Parquet file and created dynamic views to compare record counts and computing column-level variances with percentage differences.</li>
+                <li>Played a pivotal role in the “Data as a Service” project with Google by designing and enhancing a robust data profiling script using Python and SQL to compare table structures, data consistency, and quality metrics between Postgres and Redshift databases; automated validations for completeness, uniqueness, and constraints proactively identifying discrepancies.</li>
+                <li>Enhanced and automated Daily Flash report for management using AWS Lambda with advanced SQL optimizations, streamlined Data Analytics workflows, developed Python scripts for XML file comparison/modification resolving data issues, now used daily by development team to process data for 200+ warehouses.</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -351,7 +369,7 @@
               <h5>Jan, 2023 - May, 2023</h5>
               <p><em>Axon Enterprises, Scottsdale, Arizona</em></p>
               <ul>
-                <li>Used advanced analytics techniques to classify customer reviews, reducing manual effort by 3 business days per month. This resulted in an 11% boost in the Net Promoter Score, reflecting improved customer satisfaction across all services.</li>
+                <li>Built an NLP-based stacked binary classification model to classify customer reviews, reducing manual effort by 3 business days per month. This resulted in an 11% boost in the Net Promoter Score, reflecting improved customer satisfaction across all services.</li>
                 <li>Delivered an interactive and user-friendly Tableau Dashboard and Streamlit web application, assisting stakeholders effortlessly analyze the Net Promoter Score across all categories, highlighting Axon's strengths and pinpointing areas for improvement.</li>
               </ul>
             </div>
@@ -714,6 +732,7 @@
 </body>
 
 </html>
+
 
 
 
